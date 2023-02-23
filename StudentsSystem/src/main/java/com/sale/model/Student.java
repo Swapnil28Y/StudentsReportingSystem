@@ -13,8 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-
-@Document(indexName = "student-index" )
+@Document(indexName = "student-index")
 @Entity
 @Data
 @NoArgsConstructor
@@ -23,8 +22,14 @@ import lombok.ToString;
 public class Student {
 	@Id
 	private String id;
-	@Field(type = FieldType.Text , name = "name")
+	@Field(type = FieldType.Text, name = "name")
 	private String name;
 	@Field(type = FieldType.Auto, name = "semesters")
 	private List<Semester> semesters;
+
+	public Student(String s1, String s2) {
+		this.id = s1;
+		this.name = s2;
+
+	}
 }
