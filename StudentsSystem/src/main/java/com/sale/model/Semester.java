@@ -1,7 +1,8 @@
 package com.sale.model;
 
-import javax.persistence.Entity;
 
+
+import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

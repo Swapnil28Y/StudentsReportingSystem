@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import org.elasticsearch.common.UUIDs;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.sale.model.Semester;
@@ -19,7 +18,7 @@ public class StudentDaoService {
 
 	public String addStudentDetails(String name) {
 
-		String Id = UUIDs.randomBase64UUID();
+		String Id = "UUIDs.randomBase64UUID()";
 
 		System.out.println("Student Count : " + Id);
 		Semester first = new Semester(1);
@@ -89,10 +88,8 @@ public class StudentDaoService {
 			if (students.isEmpty()) {
 				throw new Exception("There is no student");
 			}
-
 			Student student = students.get();
 			return student;
-
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}

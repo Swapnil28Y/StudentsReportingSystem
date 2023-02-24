@@ -135,7 +135,7 @@ public class MainController {
 
 	@RequestMapping("/save")
 	public String saveStudent() throws IOException {
-		Student s = new Student("101", "Raj");
+		Student s = new Student("01", "Swapnil");
 		s.setSemesters(new ArrayList<Semester>());
 		System.out.println(s.toString());
 		return "save.jsp";
@@ -143,7 +143,6 @@ public class MainController {
 
 	@RequestMapping("/find")
 	public String find(Model model) {
-
 		return "find.jsp";
 	}
 }
